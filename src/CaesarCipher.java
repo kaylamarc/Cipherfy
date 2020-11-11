@@ -14,7 +14,7 @@ public class CaesarCipher {
 	/**
 	 * encrypts plaintext
 	 * @param plaintext
-	 * @return
+	 * @return StringBuffer encrypted ciphertext
 	 */
 	public StringBuffer encrypt(String plaintext) {
 		
@@ -43,7 +43,7 @@ public class CaesarCipher {
 	/**
 	 * decrypts ciphertext
 	 * @param ciphertext
-	 * @return
+	 * @return StringBuffer decrypted plaintext
 	 */
 	public StringBuffer decrypt(String ciphertext) {
 		
