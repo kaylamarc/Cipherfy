@@ -1,5 +1,5 @@
-import java.util.Random;
 import java.util.Scanner;
+import java.util.Base64;
 
 public class Cipherfy {
 
@@ -7,23 +7,11 @@ public class Cipherfy {
 		
 		Scanner input = new Scanner(System.in);
 		
-		Random r = new Random();
-		
 		String plaintext = input.nextLine();
-		String key = input.nextLine();
 		
-		OneTimePad otp = new OneTimePad(key);
+		Radix64 rad64 = new Radix64();
 		
-		char[] ciphertext = otp.encrypt(plaintext);
-		
-		for (int i = 0; i < ciphertext.length; i++) {
-			System.out.print((int)ciphertext[i] + " ");
-		}
-		System.out.println("\n");
-		
-		System.out.println(otp.decryptChar(ciphertext));
-		
-		
+		System.out.println(rad64.encode(plaintext));
 		
 	}
 
